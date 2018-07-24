@@ -4,13 +4,14 @@
 This is how Jenkins will run the tests. To run this test on the command line, use:
 
 ```
-/path/to/jmeter/jmeter.bat -t /path/to/jmx/WorkItemsLoadTest.jmx -l /path/to/report/output/report.jtl -e -o /path/to/report/dashboard
+/path/to/jmeter/jmeter.bat -t /path/to/jmx/WorkItemsLoadTest.jmx -l /path/to/report/output/report.jtl -e -o /path/to/report/dashboard -l /path/to/lightning/ci-cd/results.csv
 ```
 ### Parameters
 * __-t__: the location of your JMeter test file.
 * __-l__: the path to the intermediate JMeter output report. NOTE: This file can't already exist, so you'll have to increment file numbers. This will be important for running the tests from Jenkins. (We can attach build numbers to the file names.)
 * __-e__: instructs JMeter to create an output report (HTML) directly after the load test completes.
 * __-o__: the path where you want to create the directory for the HTML report. NOTE: The directory can't already exist, so you'll have to increment the directory name. This will be important for running the tests from Jenkins. (We can attach build numbers to the directory names.)
+* __-l__: the path where you want to use the CSV results that can be analyzed by Lightning, the CI/CD tool that generates JUnit-style test results from JMeter tests.
 
 --Example:--
 ```
