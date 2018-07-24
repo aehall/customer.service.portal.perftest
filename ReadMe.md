@@ -1,4 +1,4 @@
-### JMeter Tests 
+# JMeter Tests for the Customer Service Portal API 
 
 ## Running the Tests via Command Line
 This is how Jenkins will run the tests. To run this test on the command line, use:
@@ -6,7 +6,7 @@ This is how Jenkins will run the tests. To run this test on the command line, us
 ```
 /path/to/jmeter/jmeter.bat -t /path/to/jmx/WorkItemsLoadTest.jmx -l /path/to/report/output/report.jtl -e -o /path/to/report/dashboard
 ```
-# Parameters
+### Parameters
 * -t: the location of your JMeter test file.
 * -l: the path to the intermediate JMeter output report. NOTE: This file can't already exist, so you'll have to increment file numbers. This will be important for running the tests from Jenkins. (We can attach build numbers to the file names.)
 * -e: instructs JMeter to create an output report (HTML) directly after the load test completes.
