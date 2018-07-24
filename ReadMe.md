@@ -26,7 +26,7 @@ JMeter creates some basic reports (probaby everything we'll need for a microserv
 ## Reporting for Jenkins
 Lightning is a tool that creates JUnit-style test reports from JMeter perf test results. Jenkins can use these to pass/fail a build pipeline.
 
-After JMeter has outputted a CSV results file, you can run a standalone Lightning JAR that analyzes the results and produces a JUnit-style report for Jenkins.
+After JMeter has outputted a CSV results file, you can run a standalone Lightning JAR that analyzes the results and produces a JUnit-style report for Jenkins: http://automatictester.github.io/lightning/standalone_jar.html
 
 ## Structure of the JMeter Test File
 The JMeter test file (.jmx) is just a big XML file that contains the details of the test (as defined in the JMeter UI). (In this way, it's very similar to Visual Studio performance testing.)
