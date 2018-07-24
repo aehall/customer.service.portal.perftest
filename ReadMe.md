@@ -19,6 +19,9 @@ C:\apache-jmeter-4.0\bin\jmeter.bat -n -t C:\Source\customer-portal-service.perf
 
 NOTE: If you haven't added JMeter to your system path, you'll need to run jmeter.bat from within its containing directory.
 
+## Reporting
+JMeter creates some basic reports (probaby everything we'll need for a microservice). Look in /example-report/index.html. 
+
 ## Structure of the JMeter Test File
 The JMeter test file (.jmx) is just a big XML file that contains the details of the test (as defined in the JMeter UI). (In this way, it's very similar to Visual Studio performance testing.)
 
