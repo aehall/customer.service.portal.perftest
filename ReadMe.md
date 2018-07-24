@@ -20,8 +20,11 @@ C:\apache-jmeter-4.0\bin\jmeter.bat -n -t C:\Source\customer-portal-service.perf
 
 NOTE: If you haven't added JMeter to your system path, you'll need to run jmeter.bat from within its containing directory.
 
-## Reporting
-JMeter creates some basic reports (probaby everything we'll need for a microservice). Look in /example-report/index.html. 
+## Reporting for Humans
+JMeter creates some basic reports (probaby everything we'll need for a microservice). Look in /example-report/index.html. The report can be added to a Jenkins pipeline via the Jenkins PublishHTML plugin.
+
+## Reporting for Jenkins
+Lightning is a tool that creates JUnit-style test reports from JMeter perf test results. Jenkins can use these to pass/fail a build pipeline.
 
 ## Structure of the JMeter Test File
 The JMeter test file (.jmx) is just a big XML file that contains the details of the test (as defined in the JMeter UI). (In this way, it's very similar to Visual Studio performance testing.)
