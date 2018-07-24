@@ -7,12 +7,12 @@ This is how Jenkins will run the tests. To run this test on the command line, us
 /path/to/jmeter/jmeter.bat -t /path/to/jmx/WorkItemsLoadTest.jmx -l /path/to/report/output/report.jtl -e -o /path/to/report/dashboard
 ```
 ### Parameters
-* -t: the location of your JMeter test file.
-* -l: the path to the intermediate JMeter output report. NOTE: This file can't already exist, so you'll have to increment file numbers. This will be important for running the tests from Jenkins. (We can attach build numbers to the file names.)
-* -e: instructs JMeter to create an output report (HTML) directly after the load test completes.
-* -o: the path where you want to create the directory for the HTML report. NOTE: The directory can't already exist, so you'll have to increment the directory name. This will be important for running the tests from Jenkins. (We can attach build numbers to the directory names.)
+* __-t__: the location of your JMeter test file.
+* __-l__: the path to the intermediate JMeter output report. NOTE: This file can't already exist, so you'll have to increment file numbers. This will be important for running the tests from Jenkins. (We can attach build numbers to the file names.)
+* __-e__: instructs JMeter to create an output report (HTML) directly after the load test completes.
+* __-o__: the path where you want to create the directory for the HTML report. NOTE: The directory can't already exist, so you'll have to increment the directory name. This will be important for running the tests from Jenkins. (We can attach build numbers to the directory names.)
 
-Example:
+--Example:--
 ```
 C:\apache-jmeter-4.0\bin\jmeter.bat -n -t C:\Source\customer-portal-service.perftest\WorkItemsLoadTest.jmx -l C:\temp\portal-perf-portal-results-0.jtl -e -o C:\temp\portal-perf-dashboard0
 ```
