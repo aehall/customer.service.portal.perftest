@@ -1,7 +1,7 @@
 # JMeter Load Test POC for Customer Service Portal API
 ## 1. Get Prerequisites
 - [JMeter](https://jmeter.apache.org/download_jmeter.cgi)
-- [Lightning] (http://automatictester.github.io/lightning/standalone_jar.html)
+- [Lightning](http://automatictester.github.io/lightning/standalone_jar.html)
 
 ## 2. Set Up Your Test
 ### JMeter UI
