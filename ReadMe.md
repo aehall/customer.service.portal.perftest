@@ -24,7 +24,7 @@ You can use CSV files to data-drive your load tests. For a tutorial, [click here
 
 ## 3. Configure CI/CD Pipeline
 ### Run JMeter Tests from the Command Line
-To run this test on the command line, call jmeter.bat (or .sh if in Linux), and include the following params:
+To run a JMeter test on the command line, call jmeter.bat (or .sh if in Linux), and include the following params:
 
 #### JMeter Command Line Parameters
 * **-n**: runs JMeter in non-GUI mode.
