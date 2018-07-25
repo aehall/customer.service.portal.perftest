@@ -2,7 +2,7 @@
 ### Synopsis
 We can automate load testing as part of our CI/CD pipelines with the following steps:
 
-**Run JMeter performance test: **
+**Run JMeter performance test:**
 
 `jmeter.bat -n -t C:\Source\customer-portal-service.perftest\WorkItemsLoadTest.jmx -q C:\Source\customer-portal-service.perftest\jmeter.properties.xml -l C:\temp\portal-perf-results.csv -e -o C:\temp\portal-perf-results`
 
