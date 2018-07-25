@@ -1,5 +1,9 @@
 # JMeter Load Test POC for Customer Service Portal API
-## 1. Set Up Your Test
+## 1. Get Prerequisites
+- [JMeter](https://jmeter.apache.org/download_jmeter.cgi)
+- [Lightning] (http://automatictester.github.io/lightning/standalone_jar.html)
+
+## 2. Set Up Your Test
 ### JMeter UI
 You can use the JMeter UI to set up an API load test in just a few minutes. For a tutorial, [click here](https://www.blazemeter.com/blog/rest-api-testing-how-to-do-it-right "click here"). Here are some things to know:
 - A user is referred to as a **thread**. A group of users is a **thread group**. When you create a test, you essentially create a thread group that simulates the exercise of your application by multiple users.
@@ -18,7 +22,7 @@ You can use CSV files to data-drive your load tests. For a tutorial, [click here
 5. In your test, substitute hardcoded values with the names of fields in your CSV file like this: **$(fieldName)**. For example, the POC test in this repo uses a variable in the API query string: **/api/workitems?customerCode=${CustomerCode}**
 6. Run your test, and the CSV values should be substituted correctly.
 
-## CI/CD
+## 3. Configure CI/CD Pipeline
 ### Run JMeter Tests from the Command Line
 To run this test on the command line, call jmeter.bat (or .sh if in Linux), and include the following params:
 
