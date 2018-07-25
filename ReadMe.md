@@ -13,7 +13,7 @@ This is how Jenkins will run the tests. To run this test on the command line, us
 * __-o__: the path where you want to create the directory for the HTML report. NOTE: The directory can't already exist, so you'll have to increment the directory name. This will be important for running the tests from Jenkins. (We can attach build numbers to the directory names.)
 * __-l__: the path where you want to use the CSV results that can be analyzed by Lightning, the CI/CD tool that generates JUnit-style test results from JMeter tests.
 
---Example:--
+__Example:__
 ```
 C:\apache-jmeter-4.0\bin\jmeter.bat -n -t C:\Source\customer-portal-service.perftest\WorkItemsLoadTest.jmx -l C:\temp\portal-perf-portal-results-0.jtl -e -o C:\temp\portal-perf-dashboard0
 ```
