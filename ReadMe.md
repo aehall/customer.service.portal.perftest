@@ -53,7 +53,12 @@ To run a JMeter test on the command line, call jmeter.bat (or .sh if in Linux), 
 NOTE: If you haven't added JMeter to your system path, you'll need to run jmeter.bat from within its containing directory.
 
 ### Transform JMeter Results to JUnit Format
-While some human judgment should be used when interpreting load test results (hence the pretty HTML report created via the command line step above), we still want the option for our CI/CD tool (i.e., Jenkins) to be able to pass or fail a build based on these results. To do that, we can use a tool called [Lightning](http://automatictester.github.io/lightning/standalone_jar.html "Lightning") to transform JMeter results into the more easily parseable JUnit format. Here's how we can use Lightning via the command line to create JUnit results:
+While some human judgment should be used when interpreting load test results (hence the pretty HTML report created via the command line step above), we still want the option for our CI/CD tool (i.e., Jenkins) to be able to pass or fail a build based on these results. To do that, we can use a tool called [Lightning](http://automatictester.github.io/lightning/standalone_jar.html "Lightning") to transform JMeter results into the more easily parseable JUnit format. 
+
+You can customize a Lightning config file to determine which JMeter metrics to analyze as pass/fail tests.
+
+Here's how we can use Lightning via the command line to create JUnit results:
+
 **Example:**
 
 `java -jar lightning-standalone-5.4.0.jar verify -xml C:\Source\customer-portal-service.perftest\lightning-config.xml --jmeter-csv C:\temp\portal-perf-results.csv`
