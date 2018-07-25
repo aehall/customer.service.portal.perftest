@@ -1,0 +1,5 @@
+jmeter.save.saveservice.output_format=csv
+jmeter.save.saveservice.print_field_names=true
+jmeter.save.saveservice.successful=true
+jmeter.save.saveservice.label=true
+jmeter.save.saveservice.time=true
