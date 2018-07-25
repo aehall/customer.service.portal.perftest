@@ -30,7 +30,7 @@ To run a JMeter test on the command line, call jmeter.bat (or .sh if in Linux), 
 * **-n**: runs JMeter in non-GUI mode.
 * **-t path/to/test/file**: the location of your JMeter test file.
 * **-q path/to/config/file**: the location of your jmeter.properies.xml config file.
-* **-l path/to/output/report**: the path to the JMeter output report. The format is specified in the **jmeter.properties.xml config** file. (CSV should be used so Lightning can analyze the results and make a CI-friendly report.) NOTE: The JMeter output report file can't already exist, so you'll have to increment file numbers. This will be important for running the tests from ou CI/CD. (We can attach build numbers to the file names.)
+* **-l path/to/output/report**: the path to the JMeter output report. The format is specified in the **jmeter.properties.xml config** file. (CSV should be used so Lightning can analyze the results and make a CI-friendly report.) NOTE: The JMeter output report file can't already exist, so you'll have to increment file numbers. This will be important for running the tests from our CI/CD tool. (We can attach build numbers to the file names.)
 * **-e**: instructs JMeter to create an output report (HTML) directly after the load test completes.
 * **-o path/to/HTML/report/dir**: the path where you want to create the directory for the HTML report. NOTE: The directory can't already exist, so you'll have to increment the directory name. This will be important for running the tests from our CI/CD tool. (We can attach build numbers to the directory names.)
 
