@@ -1,5 +1,5 @@
 # JMeter Load Test POC for Customer Service Portal API
-#### Synopsis
+### Synopsis
 We can automate load testing as part of our CI/CD pipelines with the following steps:
 
 **Run JMeter performance test: **
