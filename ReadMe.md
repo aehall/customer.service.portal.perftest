@@ -6,7 +6,7 @@ We can automate load testing as part of our CI/CD pipelines with the following s
 
 `jmeter.bat -n -t C:\Source\customer-portal-service.perftest\WorkItemsLoadTest.jmx -q C:\Source\customer-portal-service.perftest\jmeter.properties.xml -l C:\temp\portal-perf-results.csv -e -o C:\temp\portal-perf-results`
 
-**Run Lightning to produce JUnit results report**
+**Run Lightning to produce JUnit results report:**
 
 `java -jar lightning-standalone-5.4.0.jar verify -xml C:\Source\customer-portal-service.perftest\lightning-config.xml --jmeter-csv C:\temp\portal-perf-results.csv`
 
