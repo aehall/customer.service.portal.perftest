@@ -67,3 +67,12 @@ The JUnit results should appear in the same folder as the lightning jar.
 
 ### Run JUnit Parser Against JUnit Results
 Jenkins (and other CI/CD tools) have JUnit Parser plugins that can successfully parse the JMeter JUnit results and produce a pass/fail result for the build pipeline.
+
+## 4. Future Considerations
+### Remote Execution
+We don't necessarily want to execute our performance tests directly on a Jenkins slave. The slave will most likely not be built to mimic a production environment, and we also don't want to tie up the slave for the length of a performance testg if other build pipelines need it. To get around this, we can leverage JMeter's remote execution capabilities. In theory, it's pretty simple: you add a comma-delimited list of remote hosts (or just one) to the jmeter.properties.xml file. Then, you add the **-r** flag to the JMeter command line, and JMeter automatically executes the tests on those remote hosts. JMeter executes the same test in parallel on each remote host. So, if each test specifies 10 users, and you're using two remote hosts, you'll end up with 20 concurrent users.
+
+For a tutorial, [click here](https://www.blazemeter.com/blog/how-to-perform-distributed-testing-in-jmeter).
+
+### Cloud Strategy
+Using the remote execution strategy described above, we should be able to spin up on-demand performance environments in AWS and execute performance tests with them. If we had a process for creating EC2 instances, we could spin them up, record the IPs, and dymanically insert those IPs into the remote execution section of jmeter.properties.xml. However, there are plenty of other things to figure out before we get to that point.
