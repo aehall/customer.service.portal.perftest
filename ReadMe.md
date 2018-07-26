@@ -35,6 +35,8 @@ You can use CSV files to data-drive your load tests. For a tutorial, [click here
 5. In your test, substitute hardcoded values with the names of fields in your CSV file like this: **$(fieldName)**. For example, the POC test in this repo uses a variable in the API query string: **/api/workitems?customerCode=${CustomerCode}**
 6. Run your test, and the CSV values should be substituted correctly.
 
+There is probably a way to customize the order in which JMeter pulls data from the CSV. We would need 
+
 ## 3. Configure CI/CD Pipeline
 ### Run JMeter Tests from the Command Line
 To run a JMeter test on the command line, call jmeter.bat (or .sh if in Linux), and include the following params:
